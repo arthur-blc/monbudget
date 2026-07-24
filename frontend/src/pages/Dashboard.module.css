@@ -1,0 +1,275 @@
+.page {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.logoutBtn {
+  padding: 8px 16px;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background 0.15s;
+}
+
+.logoutBtn:hover {
+  background: #e9ecef;
+}
+
+/* Onglets */
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.tab {
+  padding: 0.6rem 1.25rem;
+  border: none;
+  background: transparent;
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-family: inherit;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.15s;
+}
+
+.tab:hover {
+  color: #1a1a2e;
+}
+
+.tabActive {
+  color: #4361ee;
+  border-bottom-color: #4361ee;
+  font-weight: 600;
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.statCard {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+}
+
+.statCard p {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-bottom: 6px;
+}
+
+.statCard h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.statRed { color: #e53935; }
+.statGreen { color: #43a047; }
+
+/* Récap mensuel */
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+}
+
+.monthlyTable {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.monthRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 10px 15px;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  align-items: center;
+}
+
+.monthLabel {
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+/* Formulaires */
+.formSection {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.formSection h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+}
+
+.addForm {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.addForm input,
+.addForm select {
+  padding: 0.6rem 0.875rem;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.addForm input:focus,
+.addForm select:focus {
+  border-color: #4361ee;
+}
+
+.addBtn {
+  padding: 0.6rem 1.25rem;
+  background: #4361ee;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.addBtn:hover { background: #3451d1; }
+
+.addBtnGreen {
+  padding: 0.6rem 1.25rem;
+  background: #43a047;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.addBtnGreen:hover { background: #388e3c; }
+
+/* Listes */
+.expensesList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.expenseItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border: 1px solid #e9ecef;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: border-color 0.15s;
+}
+
+.expenseItem:hover {
+  border-color: #dee2e6;
+}
+
+.expenseInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.expenseDesc {
+  font-weight: 500;
+  color: #1a1a2e;
+  font-size: 0.9rem;
+}
+
+.expenseCat {
+  font-size: 0.75rem;
+  color: #4361ee;
+  background: #f0f3ff;
+  padding: 2px 8px;
+  border-radius: 999px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.expenseDate {
+  font-size: 0.75rem;
+  color: #adb5bd;
+}
+
+.expenseRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.expenseAmount {
+  color: #e53935;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.incomeAmount {
+  color: #43a047;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.deleteBtn {
+  background: none;
+  color: #adb5bd;
+  font-size: 0.875rem;
+  padding: 2px 6px;
+  cursor: pointer;
+  border: none;
+  transition: color 0.15s;
+}
+
+.deleteBtn:hover {
+  color: #e53935;
+}
