@@ -1,0 +1,5 @@
+node_modules/
+backend/budget.db
+backend/.env
+frontend/.env
+.env
