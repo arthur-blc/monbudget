@@ -26,10 +26,10 @@ export default function Dashboard() {
     const fetchData = async () => {
       try {
         const [resExpenses, resIncomes] = await Promise.all([
-          fetch('http://localhost:3000/api/expenses', {
+          fetch(`${import.meta.env.VITE_API_URL}/api/expenses`, {
             headers: { 'Authorization': `Bearer ${token}` }
           }),
-          fetch('http://localhost:3000/api/incomes', {
+          fetch(`${import.meta.env.VITE_API_URL}/api/incomes`, {
             headers: { 'Authorization': `Bearer ${token}` }
           })
         ])
@@ -49,7 +49,7 @@ export default function Dashboard() {
 
   const handleAddExpense = async () => {
     if (!form.amount || !form.description || !form.date) return
-    const res = await fetch('http://localhost:3000/api/expenses', {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/expenses`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
       body: JSON.stringify(form)
@@ -60,7 +60,7 @@ export default function Dashboard() {
   }
 
   const handleDelete = async (id) => {
-    await fetch(`http://localhost:3000/api/expenses/${id}`, {
+    await fetch(`${import.meta.env.VITE_API_URL}/api/expenses/${id}`, {
       method: 'DELETE',
       headers: { 'Authorization': `Bearer ${token}` }
     })
@@ -69,7 +69,7 @@ export default function Dashboard() {
 
   const handleAddIncome = async () => {
     if (!incomeForm.amount || !incomeForm.description || !incomeForm.date) return
-    const res = await fetch('http://localhost:3000/api/incomes', {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/incomes`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
       body: JSON.stringify(incomeForm)
@@ -80,7 +80,7 @@ export default function Dashboard() {
   }
 
   const handleDeleteIncome = async (id) => {
-    await fetch(`http://localhost:3000/api/incomes/${id}`, {
+    await fetch(`${import.meta.env.VITE_API_URL}/api/incomes/${id}`, {
       method: 'DELETE',
       headers: { 'Authorization': `Bearer ${token}` }
     })
